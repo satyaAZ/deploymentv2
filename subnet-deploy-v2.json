@@ -6,7 +6,7 @@
             "type": "string"
         },
         "subnet_pfx": {
-            "type": "array"
+            "type": "string"
         },
         "vnet_name": {
             "type": "string"
