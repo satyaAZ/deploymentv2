@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subnet_name": {
+            "type": "string"
+        },
+        "subnet_pfx": {
+            "type": "array"
+        },
+        "vnet_name": {
+            "type": "string"
+            
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2020-11-01",
+            "name": "[concat(parameters('vnet_name'), '/', parameters('subnet_name'))]",
+            "properties": {
+                "addressPrefix": {
+                "addressPrefixes": "[parameters('subnet_pfx') ]"
+                }
+            }
+        }
+    ],
+    "outputs": {}
+}
