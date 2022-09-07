@@ -14,7 +14,7 @@
         "privateIP_address": {
             "type": "string"
         },
-        "nsg_name": {
+        "nsg_name2": {
             "type": "string"
         }
     },
@@ -40,7 +40,7 @@
                     }
                 ],
                 "networkSecurityGroup": {
-                    "id": "[parameters('nsg_name')]"
+                    "id": "[parameters('nsg_name2')]"
                 }
             }
         }
