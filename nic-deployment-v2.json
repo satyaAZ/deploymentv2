@@ -5,7 +5,7 @@
         "nic_Name": {
             "type": "string"
         },
-        "subnet_name": {
+        "nic_subnet_name": {
             "type": "string"
         },
         "privateIP_type": {
@@ -33,7 +33,7 @@
                             "privateIpAddressVersion": "IPv4",
                             "privateIPAllocationMethod": "[parameters('privateIP_type')]",
                             "subnet": {
-                                "id": "[parameters('subnet_name')]"
+                                "id": "[parameters('nic_subnet_name')]"
                             },
                             "privateIPAddress": "[parameters('privateIP_address')]"
                         }
